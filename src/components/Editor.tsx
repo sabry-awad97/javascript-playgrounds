@@ -5,7 +5,6 @@ import { useActions, useAppSelector } from '../redux/hooks';
 import { selectRawCode } from '../redux/selectors';
 
 import 'codemirror/mode/jsx/jsx';
-import { useBundler } from '../hooks/useBundler';
 
 interface EditorProps {}
 
