@@ -1,15 +1,16 @@
 import SplitPane from 'react-split-pane';
 import Editor from './components/Editor';
+import Viewer from './components/Viewer';
 
 import './App.css';
 
-const width = window.innerHeight;
+const height = window.innerHeight;
 
 const App = () => {
   return (
-    <SplitPane split="vertical" defaultSize={width}>
+    <SplitPane split="vertical" defaultSize={height}>
       <Editor />
-      <div />
+      <Viewer />
     </SplitPane>
   );
 };

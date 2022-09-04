@@ -1,18 +1,24 @@
 import { FC } from 'react';
+
 import CodeMirror from 'react-codemirror';
 import { useActions, useAppSelector } from '../redux/hooks';
+import { selectRawCode } from '../redux/selectors';
+
 import 'codemirror/mode/jsx/jsx';
+import { useBundler } from '../hooks/useBundler';
 
 interface EditorProps {}
 
 const Editor: FC<EditorProps> = () => {
-  const code = useAppSelector(state => state.code);
+  const code = useAppSelector(selectRawCode);
+
   const { updateCode } = useActions();
+
   return (
     <div>
       <CodeMirror
         value={code}
-        onChange={newValue => updateCode(newValue)}
+        onChange={newCode => updateCode(newCode)}
         options={{ mode: 'jsx', lineNumbers: true, tabSize: 2 }}
       />
     </div>
