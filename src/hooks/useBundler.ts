@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import initSwc, { transformSync } from '@swc/wasm-web';
 
 interface ITranformSyncOutput {
