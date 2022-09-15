@@ -8,6 +8,7 @@ const Viewer = () => {
   const { errorMessage, expressions } = useEval();
 
   return (
+    // @ts-ignore
     <SplitPane
       split="horizontal"
       defaultSize={defaultHeight}

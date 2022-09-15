@@ -8,6 +8,7 @@ const height = window.innerHeight;
 
 const App = () => {
   return (
+    // @ts-ignore
     <SplitPane split="vertical" defaultSize={height}>
       <Editor />
       <Viewer />
